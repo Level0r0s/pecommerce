@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    {LIBRARIES}
+    {HEAD}
+    <script type="text/javascript">
+    $('[generator="adianti"]').live('click', function()
+    {
+       __adianti_load_page($(this).attr('href'));
+       return false;
+    });
+    
+    window.onpopstate = function(stackstate)
+    {
+    	if (stackstate.state)
+    	{
+    		__adianti_load_page_no_register(stackstate.state.url);
+    	}
+    };
+    
+    $(function() {
+        $( document ).tooltip();
+    });
+    </script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php?class=Home"><span class='glyphicon glyphicon-th'></span> E-Commerce</a>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+<li><a href='index.php?class=CategoriaList'>Categoria</a><li></li>
+<li><a href='index.php?class=ProdutosList'>Produtos</a><li></li>
+<li><a href='index.php?class=ClientesList'>Clientes</a><li></li>
+<li><a href='index.php?class=PedidosList'>Pedidos</a><li></li>
+<li><a href='index.php?class=UsuarioList'>Usuario</a><li></li>
+
+
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header"> <span class='glyphicon glyphicon-th-list'></span> E-Commerce Admin</h1>
+
+           
+            <div id="adianti_div_content" class="content"></div>
+            <div id="adianti_online_content"></div>
+            <div id="pageboth"><br></div>
+        </div>
+               </div>
+    </div>
+</div>
+        <div style="clear:both;"></div>
+    </div>
+    <script type="text/javascript" id="adianti_placeholder">
+    //#javascript_placeholder#
+    </script>
+</body>
+</html>
