@@ -43,5 +43,5 @@ TSession::freeSession();
 TCoreApplication::executeMethod('Home');
 
 }
-
+}
 ?>
